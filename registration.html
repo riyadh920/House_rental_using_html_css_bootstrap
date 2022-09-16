@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>House Rent Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+
+    <style type="text/css">
+  
+
+            /* ============ desktop view ============ */
+            @media all and (min-width: 992px) {
+            
+                .dropdown-menu li{ 
+                    position: relative;
+                }
+                .dropdown-menu .submenu{ 
+                    display: none;
+                    position: absolute;
+                    left:100%; top:-7px;
+                }
+                .dropdown-menu .submenu-left{ 
+                    right:100%; left:auto;
+                }
+            
+                .dropdown-menu > li:hover{ background-color: #f1f1f1 }
+                .dropdown-menu > li:hover > .submenu{
+                    display: block;
+                }
+            }	
+            /* ============ desktop view .end// ============ */
+            
+            /* ============ small devices ============ */
+            @media (max-width: 991px) {
+            
+            .dropdown-menu .dropdown-menu{
+                    margin-left:0.7rem; margin-right:0.7rem; margin-bottom: .5rem;
+            }
+            
+            }	
+
+    </style>
+
+
+
+</head>
+<body style="overflow-x: hidden;">
+    <div class="sticky-top">
+        <header >
+            <div class="row">
+                <div class="col-md-3 bg-dark">
+                    
+                </div>
+                <div class="col-md-6 bg-dark">
+                    <h1 class="text-white" style="text-align: center;">House Rent Management System</h1>
+                </div>
+                <div class="col-md-3 bg-dark" id="list">
+                    <ul  style="display: flex; flex-direction: row ;list-style: none; column-gap: 10px; padding: 0; margin-TOP: 12PX">
+                        <li><a href=".\index.html" class="btn btn-light">Home</a></li>
+                        <li><a href=".\about.html" class="btn btn-light">About</a></li>
+                        <li><a href=".\contact.html" class="btn btn-light">Contact</a></li>
+                        <li><a href=".\login.html"class="btn btn-primary" type="buttom">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </div>
+        <nav>
+            <div class="row ">
+                
+                <div class="col-md-6">
+                    <ul class="navbar-nav" style="margin: 15px; margin-left: 200px;">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle btn btn-warning " href="#" data-bs-toggle="dropdown" style="text-align: center; width: 100px;">Categories</a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#"> Male &raquo; </a>
+                                   <ul class="submenu dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Hostel</a></li>
+                                    <li><a class="dropdown-item" href="#">Sublet</a></li>
+                                    <li><a class="dropdown-item" href="#">Flat</a></li>
+                                 </ul>
+                              </li>
+                              <li><a class="dropdown-item" href="#">Female &raquo; </a>
+                                   <ul class="submenu dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Hostel</a></li>
+                                    <li><a class="dropdown-item" href="#">Sublet</a></li>
+                                    <li><a class="dropdown-item" href="#">Flat</a></li>
+                                 
+                                 </ul>
+                              </li>
+                              <li><a class="dropdown-item" href="#"> Family &raquo;</a>
+                                   <ul class="submenu dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Flat</a></li>
+                                    <li><a class="dropdown-item" href="#">Sublet</a></li>
+                                 </ul>
+                              </li>
+                              
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6" style="text-align:left;">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="margin-top: 15px; margin-bottom: 5px;"><button class="btn btn-outline-success btn-md" type="submit" style="margin-top: 15px; margin-bottom: 5px;"><i class="fab fa-searchengin"></i></button>
+                       
+                      </form>
+                </div>
+            </div>  
+        </nav>
+
+    
+    <hr>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="signup-form">
+                        <form action="" class="mt-5 border p-4 bg-light shadow">
+                            <h4 class="mb-5 text-secondary">Customer Registration</h4>
+                            <div class="row">
+                                <div class="mb-3 col-md-6">
+                                    <label>First Name<span class="text-danger">*</span></label>
+                                    <input type="text" name="fname" class="form-control" placeholder="Enter First Name">
+                                </div>
+        
+                                <div class="mb-3 col-md-6">
+                                    <label>Last Name<span class="text-danger">*</span></label>
+                                    <input type="text" name="Lname" class="form-control" placeholder="Enter Last Name">
+                                </div>
+    
+                                <div class="mb-3 col-md-12">
+                                    <label>Phone<span class="text-danger">*</span></label>
+                                    <input type="number" name="Pnumber" class="form-control" placeholder="Enter Phone Number" required>
+                                </div>
+    
+                                <div class="mb-3 col-md-12">
+                                    <label>Email<span class="text-danger">*</span></label>
+                                    <input type="email" name="email" class="form-control" placeholder="Enter Your Email Name " required>
+                                </div>
+    
+                                <div class="mb-3 col-md-12">
+                                    <label>Gender<span class="text-danger">*</span></label>
+                                
+    
+                                <div class="mb-3 col-md-12">
+                                    <label for="male" class="radio-inline">
+                                    <input type="radio" name="Gender" id="male">Male</label>
+    
+                                    <label for="female" class="radio-inline">
+                                        <input type="radio" name="Gender" id="female">Female</label>
+    
+                                        <label for="others" class="radio-inline">
+                                            <input type="radio" name="Gender" id="others">Others</label>
+                                </div>
+        
+                                <div class="mb-3 col-md-12">
+                                    <label>Password<span class="text-danger">*</span></label>
+                                    <input type="password" name="password" class="form-control" placeholder="Enter Password">
+                                </div>
+                                
+    
+                                <div class="mb-3 col-md-12">
+                                    <label>Confirm Password<span class="text-danger">*</span></label>
+                                    <input type="password" name="confirmpassword" class="form-control" placeholder="Confirm Password">
+                                </div>
+    
+                                <div class="mb-3 col-md-12">
+                                    <label>Current location<span class="text-danger">*</span></label>
+                                    <input type="location" name="currentlocation" class="form-control " placeholder="Current Location">
+                                </div>
+    
+                                <div class="mb-3 col-md-12">
+                                    <label>permanent location<span class="text-danger">*</span></label>
+                                    <input type="location" name="permanent location" class="form-control " placeholder="permanent Location">
+                                </div>
+                                <div class="col-md-12">
+                                   <button class="btn btn-primary float-end">Registration</button>
+                                </div>
+                            </div>
+                        </form>
+                        <p class="text-center mt-3 text-secondary">If you have account, Please <a href="./login.html">Login Now</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="signup-form">
+                        <form action="" class="mt-5 border p-4 bg-light shadow">
+                            <h4 class="mb-5 text-secondary">Owner Registration</h4>
+                            <div class="row">
+                                <div class="mb-3 col-md-6">
+                                    <label>First Name<span class="text-danger">*</span></label>
+                                    <input type="text" name="fname" class="form-control" placeholder="Enter First Name">
+                                </div>
+        
+                                <div class="mb-3 col-md-6">
+                                    <label>Last Name<span class="text-danger">*</span></label>
+                                    <input type="text" name="Lname" class="form-control" placeholder="Enter Last Name">
+                                </div>
+    
+                                <div class="mb-3 col-md-12">
+                                    <label>Phone<span class="text-danger">*</span></label>
+                                    <input type="number" name="Pnumber" class="form-control" placeholder="Enter Phone Number">
+                                </div>
+    
+                                <div class="mb-3 col-md-12">
+                                    <label>Email<span class="text-danger">*</span></label>
+                                    <input type="email" name="email" class="form-control" placeholder="Enter Your Email Name ">
+                                </div>
+    
+                                <div class="mb-3 col-md-12">
+                                    <label>Gender<span class="text-danger">*</span></label>
+                                
+    
+                                <div class="mb-3 col-md-12">
+                                    <label for="male" class="radio-inline">
+                                    <input type="radio" name="Gender" id="male">Male</label>
+    
+                                    <label for="female" class="radio-inline">
+                                        <input type="radio" name="Gender" id="female">Female</label>
+    
+                                        <label for="others" class="radio-inline">
+                                            <input type="radio" name="Gender" id="others">Others</label>
+                                </div>
+        
+                                <div class="mb-3 col-md-12">
+                                    <label>Password<span class="text-danger">*</span></label>
+                                    <input type="password" name="password" class="form-control" placeholder="Enter Password">
+                                </div>
+                                
+    
+                                <div class="mb-3 col-md-12">
+                                    <label>Confirm Password<span class="text-danger">*</span></label>
+                                    <input type="password" name="confirmpassword" class="form-control" placeholder="Confirm Password">
+                                </div>
+    
+                                <div class="mb-3 col-md-12">
+                                    <label>Current Address<span class="text-danger">*</span></label>
+                                    <input type="address" name="currentaddress" class="form-control " placeholder="Current Address">
+                                </div>
+    
+                                <div class="mb-3 col-md-12">
+                                    <label>House Address<span class="text-danger">*</span></label>
+                                    <input type="address" name="House Address" class="form-control " placeholder="House Address">
+                                </div>
+                                <div class="col-md-12">
+                                   <button class="btn btn-primary float-end">Registration</button>
+                                </div>
+                            </div>
+                        </form>
+                        <p class="text-center mt-3 text-secondary">If you have account, Please <a href="./login.html">Login Now</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    
+    <footer class="bg-dark">
+        <div  class="row" style="display: flex; flex-direction: row ;list-style: none; column-gap: 10px; color: white;">
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-2" >
+                <h4 >Company</h4>
+                <label for="">Name of company</label><br>
+               <label for="">+8801755555566</label><br>
+               <a href="">r2@gmail.com</a>
+
+            </div>
+            <div class="col-md-2">
+                <h4>Get help</h4>
+                <ul>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Order status</a></li>
+                    <li><a href="#">Payment options</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-md-2">
+                <h4>Follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-md-3">
+
+            </div>
+           </div>
+            
+        </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  </body>
+</html>
+<script> function myFunction(id) {
+    document.getElementById(id).classList.toggle("show");
+  }</script>

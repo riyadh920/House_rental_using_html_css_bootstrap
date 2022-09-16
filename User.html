@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+              .dropdown-list-image {
+    position: relative;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+.dropdown-list-image img {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+.btn-light {
+    color: #2cdd9b;
+    background-color: #e5f7f0;
+    border-color: #d8f7eb;
+}
+    </style>
+  </head>
+<body style="overflow-x: hidden;">
+
+  <div class="container-fluid sticky-top">
+    <div class="row">
+      <div class="col-2" style="background-color:cyan; height: 732px;">
+
+        <div class="dropdown border-top">
+            <a href="#" class="d-flex align-items-center justify-content-center p-1 link-dark text-decoration-none " id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="https://media-exp1.licdn.com/dms/image/C4D03AQEcSDXZBePluw/profile-displayphoto-shrink_200_200/0/1645956207595?e=1658361600&v=beta&t=aI1yGBt1mU9Oq-YcFkvEZNNUlGEjPr1dami4xntT3cQ" alt="mdo" width="110px" height="110px" class="rounded-circle">
+            </a>
+            <!-- <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
+
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul> -->
+          </div>
+          <div>
+              <h4 class="text-center"> M. Estiaque A Khan </h4>
+          </div>
+          <hr class="dropdown-divider">
+          <div>
+            
+            <div class="list-group" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action " id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">Profile</a>
+                <a class="list-group-item list-group-item-action active" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">Edit Profile</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="list-messages">Messages</a>
+                <a class="list-group-item list-group-item-action" id="list-myad-list" data-bs-toggle="list" href="#list-myad" role="tab" aria-controls="list-myad">My Ad</a>
+                <a class="list-group-item list-group-item-action" id="list-create_ad-list" data-bs-toggle="list" href="#list-create_ad" role="tab" aria-controls="list-create_ad">Create Post</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="list-settings">Settings</a>
+                <a class="list-group-item list-group-item-action" id="list-logout-list" data-bs-toggle="list" href="#list-logout" role="tab" aria-controls="list-logout">Log Out</a>
+            </div>
+            
+                
+               
+          </div>
+        <!-- <ul>
+          <li>Demo 1</li>
+          <li>Demo 2</li>
+          <li>Demo 3</li>
+          
+        </ul> -->
+
+
+
+      </div>
+      <div class="col-10">
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade " id="list-home" role="tabpanel" aria-labelledby="list-home-list"></div>
+            <div class="tab-pane fade show active" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+<!-- Profile -->
+                            <div class="container-fluid sticky-top">
+                              <div class="row">
+                                  <div class="call-2">
+
+                                  </div class=call-10>
+                                      <div>
+                                          <div class="container bootstrap snippets bootdey">
+                                              <h1 class="text-primary">Edit Profile</h1>
+                                              <hr>
+                                              <div class="row">
+                                              <!-- left column -->
+                                              <div class="col-md-3">
+                                                  <div class="text-center">
+                                                  <img src="https://media-exp1.licdn.com/dms/image/C4D03AQEcSDXZBePluw/profile-displayphoto-shrink_200_200/0/1645956207595?e=1658361600&v=beta&t=aI1yGBt1mU9Oq-YcFkvEZNNUlGEjPr1dami4xntT3cQ" class="avatar img-circle img-thumbnail" alt="avatar">
+                                                  <h6>Upload a different photo...</h6>
+                                                  
+                                                  <input type="file" class="form-control">
+                                                  </div>
+                                              </div>
+                                              
+                                              <!-- edit form column -->
+                                              <div class="col-md-9 personal-info">
+                                                  <div class="alert alert-info alert-dismissable">
+                                                  <a class="panel-close close" data-dismiss="alert">×</a> 
+                                                  <i class="fa fa-coffee"></i>
+                                                  This is an <strong>.alert</strong>. Use this to show important messages to the user.
+                                                  </div>
+                                                  <h3>Personal info</h3>
+                                                  
+                                                  <form class="form-horizontal" role="form">
+                                                      <label class="col-lg-3 control-label">Name:</label>
+                                                      <div class="row">
+                                                          <div class="col-8">
+                                                            <input type="text" class="form-control" placeholder="First name">
+                                                          </div>
+                                                          <div class="col">
+                                                            <input type="text" class="form-control" placeholder="Last name">
+                                                          </div>
+                                                        </div>
+                                                  
+                                                  <div class="form-group">
+                                                      <label class="col-lg-3 control-label">Company:</label>
+                                                      <div class="row">
+                                                          <div class="col">
+                                                            <input type="text" class="form-control" placeholder="Company Name">
+                                                          </div>
+                                                        
+                                                        </div>
+                                                  </div>
+                                                  <div class="form-group">
+                                                      <label class="col-lg-3 control-label">Email:</label>
+                                                      <div class="row">
+                                                          <div class="col">
+                                                            <input type="email" class="form-control" placeholder="Ex: example@xyz.com">
+                                                          </div>
+                                                        
+                                                        </div>
+                                                  </div>
+                                                  <div class="form-group">
+                                                      <label class="col-lg-3 control-label">Address:</label>
+                                                      <div class="row">
+                                                          <div class="col">
+                                                            <input type="text" class="form-control" placeholder="Please input a valid address">
+                                                          </div>
+                                                        
+                                                        </div>
+                                                  </div> 
+                                                  
+
+                                                      <div class="row">
+                                                          <div class="col-5">
+                                                              <label for="">City</label>
+                                                              <div class="ui-select">
+                                                                  <select id="city" class="form-control">
+                                                                  <option value="" selected="selected">---</option>
+                                                                  <option value="Dhaka">Dhaka</option>
+                                                                  <option value="Natore">Natore</option>
+                                                                  <option value="Gazipur">Gazipur</option>
+                                                                  <option value="Khulna">Khulna</option> 
+                                                                  <option value="Pabna">Pabna</option>
+                                                                  <option value="Feni">Feni</option>
+                                                                  </select>
+                                                              </div>
+                                                          </div>
+
+
+                                                          <div class="col-4">
+                                                              <label for="">Divisions</label>
+                                                              <div class="ui-select">
+                                                                  <select id="divisions" class="form-control">
+                                                                      <option value="" selected="selected">---</option>
+                                                                      <option value="Dhaka">Dhaka</option>
+                                                                      <option value="Rajshahi">Rajshahi</option>
+                                                                      <option value="Rangpur">Rangpur</option>
+                                                                      <option value="Mymensingh">Mymensingh</option>
+                                                                      <option value="Sylhet">Sylhet</option>
+                                                                      <option value="Khulna">Khulna</option>
+                                                                      <option value="Chittagong">Chittagong</option>
+                                                                      <option value="Barisal">Barisal</option>
+
+                                                                  </select>
+                                                              </div>
+                                                          </div>
+
+                                                          <div class="col">
+                                                              <label for="">Zip</label>
+                                                              <div class="ui-select">
+                                                                  <select id="zip" class="form-control">
+                                                                      <option value="" selected="selected">---</option>
+                                                                      <option value="1230">1230</option>
+                                                                      <option value="1200">1200</option>
+                                                                      <option value="1210">1210</option>
+                                                                      <option value="1000">1000</option>
+                                                                      <option value="1100">1100</option>
+                                                                      <option value="1159">1159</option>
+                                                                      <option value="1022">1022</option>
+                                                                      <option value="1206">1206</option>
+                                                                      <option value="1212">1212</option>
+
+                                                                  </select>
+                                                              </div>
+                                                          </div>
+
+                                                      </div><br>
+                                                      <button type="button" class="btn btn-primary">Save Change</button>
+
+                                                  </form>
+                                              </div>
+                                          </div>
+                                          </div>
+                                          <hr>
+                                      </div>
+                              </div>
+                            </div>
+             
+              
+            </div>
+
+            <!-- Profile End -->
+            <div class="tab-pane fade" id="list-myad" role="tabpanel" aria-labelledby="list-myad-list">
+              <p>aaaaa</p>
+
+            </div>
+
+<!-- Create Ad -->
+            <div class="tab-pane fade" id="list-create_ad" role="tabpanel" aria-labelledby="list-create_ad-list">
+
+
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        
+                        <div class="col-md-8">
+                            
+                            <h1>Create post</h1>
+                            
+                            <form action="" method="POST">
+                                <div class="form-group">
+                                    <label for="title">Title <span class="require">*</span></label>
+                                    <input type="text" class="form-control" name="title" />
+                                </div><br>
+                                
+                                <div class="form-group">
+                                    <label for="title">Description <span class="require">*</span></label>
+                                    <textarea rows="5" class="form-control" name="description" ></textarea>
+                                </div><br>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="category">Category <span class="require">*</span></label>
+                                        <div class="ui-select">
+                                            <select id="category" class="form-control">
+                                            <option value="" selected="selected">---</option>
+                                            <option value="Family">Family</option>
+                                            <option value="Bacholor">Bacholor</option>
+                                            <option value="Hostel">Hostel</option>
+                                            <option value="Mesh">Mesh</option> 
+                                            </select>
+                                        </div>
+                                    </div>
+            
+            
+                                    <div class="col-md-6">
+                                        <label for="sub_category">Sub Category <span class="require">*</span></label>
+                                        <div class="ui-select">
+                                            <select id="sub_category" class="form-control">
+                                                <option value="" selected="selected">---</option>
+                                                <option value="One Room">One Room</option>
+                                                <option value="Two Room">Two Room</option>
+                                                <option value="Three Room">Three Room</option>
+                                                <option value="Sublet">Sublet</option>
+                                                <option value="Sit">Sit</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div><br>
+            
+            
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="Price">Price <span class="require">*</span></label>
+                                        <input type="text" class="form-control" name="title" />
+                                    </div>
+            
+            
+                                    <div class="col-md-6">
+                                        <label for="Special Price">Special Price <span class=""></span></label>
+                                        <input type="text" class="form-control" name="title" disabled />
+                                    </div>
+                                </div><br>
+            
+            <!-- Image -->
+                                <div class="row">
+                                    
+                                    <div class="col-md-3">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOEQIngGwFuKlqu0cch_o8noUFwbltEFySLA&usqp=CAU" class="avatar img-circle img-thumbnail" alt="avatar">
+                                    </div>
+            
+                                    <div class="col-md-3">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOEQIngGwFuKlqu0cch_o8noUFwbltEFySLA&usqp=CAU" class="avatar img-circle img-thumbnail" alt="avatar">
+                                    </div>
+            
+                                    <div class="col-md-3">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOEQIngGwFuKlqu0cch_o8noUFwbltEFySLA&usqp=CAU" class="avatar img-circle img-thumbnail" alt="avatar">
+                                    </div>
+            
+                                    <div class="col-md-3">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOEQIngGwFuKlqu0cch_o8noUFwbltEFySLA&usqp=CAU" class="avatar img-circle img-thumbnail" alt="avatar">
+                                    </div>
+            
+                                </div><br>
+            
+                                <div>
+                                    <label for="file">Choose images file<span class="require">*</span></label>
+                                    <input type="file" class="form-control">
+                                </div><br>
+                                    
+            
+            
+            
+                                <div class="form-group">
+                                    <label for="address">Location <span class="require">*</span></label>
+                                    <input type="address" class="form-control" name="address" />
+                                </div>
+            
+                                <div class="row">
+                                    <div class="col-5">
+                                        <label for="">City</label>
+                                        <div class="ui-select">
+                                            <select id="city" class="form-control">
+                                            <option value="" selected="selected">---</option>
+                                            <option value="Dhaka">Dhaka</option>
+                                            <option value="Natore">Natore</option>
+                                            <option value="Gazipur">Gazipur</option>
+                                            <option value="Khulna">Khulna</option> 
+                                            <option value="Pabna">Pabna</option>
+                                            <option value="Feni">Feni</option>
+                                            </select>
+                                        </div>
+                                    </div>
+            
+            
+                                    <div class="col-4">
+                                        <label for="">Divisions</label>
+                                        <div class="ui-select">
+                                            <select id="divisions" class="form-control">
+                                                <option value="" selected="selected">---</option>
+                                                <option value="Dhaka">Dhaka</option>
+                                                <option value="Rajshahi">Rajshahi</option>
+                                                <option value="Rangpur">Rangpur</option>
+                                                <option value="Mymensingh">Mymensingh</option>
+                                                <option value="Sylhet">Sylhet</option>
+                                                <option value="Khulna">Khulna</option>
+                                                <option value="Chittagong">Chittagong</option>
+                                                <option value="Barisal">Barisal</option>
+            
+                                            </select>
+                                        </div>
+                                    </div>
+            
+                                    <div class="col">
+                                        <label for="">Zip</label>
+                                        <div class="ui-select">
+                                            <select id="zip" class="form-control">
+                                                <option value="" selected="selected">---</option>
+                                                <option value="1230">1230</option>
+                                                <option value="1200">1200</option>
+                                                <option value="1210">1210</option>
+                                                <option value="1000">1000</option>
+                                                <option value="1100">1100</option>
+                                                <option value="1159">1159</option>
+                                                <option value="1022">1022</option>
+                                                <option value="1206">1206</option>
+                                                <option value="1212">1212</option>
+            
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div><br>
+                                <hr>
+                                
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary">
+                                        Post
+                                    </button>
+                                    <button class="btn btn-default">
+                                        Cancel
+                                    </button>
+                                </div> <br>
+                                
+                            </form>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+
+
+            </div>
+
+<!-- Create Ad End -->
+
+            
+<!-- Messages -->
+            <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                
+              <div class="container-fluid">
+                <div class="row">
+                    
+                    <div class="col-lg-12 right">
+                        <div class="box shadow-sm rounded bg-white mb-3">
+                            <div class="box-title border-bottom p-3">
+                                <h6 class="m-0">Recent</h6>
+                            </div>
+                            <div class="box-body p-0">
+                                <div class="p-3 d-flex align-items-center bg-light border-bottom osahan-post-header">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="" />
+                                    </div>
+                                    <div class="font-weight-bold mr-3">
+                                        <div class="text-truncate">DAILY RUNDOWN: WEDNESDAY</div>
+                                        <div class="small">Income tax sops on the cards, The bias in VC funding, and other top news for you</div>
+                                    </div>
+                                    <span class="ml-auto mb-auto">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-light btn-sm rounded" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="mdi mdi-dots-vertical"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <button class="dropdown-item" type="button"><i class="mdi mdi-delete"></i> Delete</button>
+                                                <button class="dropdown-item" type="button"><i class="mdi mdi-close"></i> Turn Off</button>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="text-right text-muted pt-1">3d</div>
+                                    </span>
+                                </div>
+                                <div class="p-3 d-flex align-items-center osahan-post-header">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" />
+                                    </div>
+                                    <div class="font-weight-bold mr-3">
+                                        <div class="mb-2">We found a job at askbootstrap Ltd that you may be interested in Vivamus imperdiet venenatis est...</div>
+                                        <button type="button" class="btn btn-outline-success btn-sm">View Jobs</button>
+                                    </div>
+                                    <span class="ml-auto mb-auto">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-light btn-sm rounded" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="mdi mdi-dots-vertical"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <button class="dropdown-item" type="button"><i class="mdi mdi-delete"></i> Delete</button>
+                                                <button class="dropdown-item" type="button"><i class="mdi mdi-close"></i> Turn Off</button>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="text-right text-muted pt-1">4d</div>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box shadow-sm rounded bg-white mb-3">
+                            <div class="box-title border-bottom p-3">
+                                <h6 class="m-0">Earlier</h6>
+                            </div>
+                            <div class="box-body p-0">
+                                <div class="p-3 d-flex align-items-center border-bottom osahan-post-header">
+                                    <div class="dropdown-list-image mr-3 d-flex align-items-center bg-danger justify-content-center rounded-circle text-white">DRM</div>
+                                    <div class="font-weight-bold mr-3">
+                                        <div class="text-truncate">DAILY RUNDOWN: MONDAY</div>
+                                        <div class="small">Nunc purus metus, aliquam vitae venenatis sit amet, porta non est.</div>
+                                    </div>
+                                    <span class="ml-auto mb-auto">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-light btn-sm rounded" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="mdi mdi-dots-vertical"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-right" >
+                                                <button class="dropdown-item" type="button"><i class="mdi mdi-delete"></i> Delete</button>
+                                                <button class="dropdown-item" type="button"><i class="mdi mdi-close"></i> Turn Off</button>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="text-right text-muted pt-1">3d</div>
+                                    </span>
+                                </div>
+                                <div class="p-3 d-flex align-items-center border-bottom osahan-post-header">
+                                    <div class="dropdown-list-image mr-3"><img class="rounded-circle" src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="" /></div>
+                                    <div class="font-weight-bold mr-3">
+                                        <div class="text-truncate">DAILY RUNDOWN: SATURDAY</div>
+                                        <div class="small">Pellentesque semper ex diam, at tristique ipsum varius sed. Pellentesque non metus ullamcorper</div>
+                                    </div>
+                                    <span class="ml-auto mb-auto">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-light btn-sm rounded" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="mdi mdi-dots-vertical"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <button class="dropdown-item" type="button"><i class="mdi mdi-delete"></i> Delete</button>
+                                                <button class="dropdown-item" type="button"><i class="mdi mdi-close"></i> Turn Off</button>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="text-right text-muted pt-1">3d</div>
+                                    </span>
+                                </div>
+                                <div class="p-3 d-flex align-items-center border-bottom osahan-post-header">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" />
+                                    </div>
+                                    <div class="font-weight-bold mr-3">
+                                        <div class="mb-2"><span class="font-weight-normal">Congratulate Gurdeep Singh Osahan (iamgurdeeposahan)</span> for 5 years at Askbootsrap Pvt.</div>
+                                        <button type="button" class="btn btn-outline-success btn-sm">Say congrats</button>
+                                    </div>
+                                    <span class="ml-auto mb-auto">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-light btn-sm rounded" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="mdi mdi-dots-vertical"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <button class="dropdown-item" type="button"><i class="mdi mdi-delete"></i> Delete</button>
+                                                <button class="dropdown-item" type="button"><i class="mdi mdi-close"></i> Turn Off</button>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="text-right text-muted pt-1">4d</div>
+                                    </span>
+                                </div>
+                                <div class="p-3 d-flex align-items-center border-bottom osahan-post-header">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="" />
+                                    </div>
+                                    <div class="font-weight-bold mr-3">
+                                        <div>
+                                            <span class="font-weight-normal">Congratulate Mnadeep singh (iamgurdeeposahan)</span> for 4 years at Askbootsrap Pvt.
+                                            <div class="small text-success"><i class="fa fa-check-circle"></i> You sent Mandeep a message</div>
+                                        </div>
+                                    </div>
+                                    <span class="ml-auto mb-auto">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-light btn-sm rounded" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="mdi mdi-dots-vertical"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <button class="dropdown-item" type="button"><i class="mdi mdi-delete"></i> Delete</button>
+                                                <button class="dropdown-item" type="button"><i class="mdi mdi-close"></i> Turn Off</button>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="text-right text-muted pt-1">4d</div>
+                                    </span>
+                                </div>
+                                <div class="p-3 d-flex align-items-center border-bottom osahan-post-header">
+                                    <div class="dropdown-list-image mr-3 d-flex align-items-center bg-success justify-content-center rounded-circle text-white">M</div>
+                                    <div class="font-weight-bold mr-3">
+                                        <div class="text-truncate">DAILY RUNDOWN: MONDAY</div>
+                                        <div class="small">Nunc purus metus, aliquam vitae venenatis sit amet, porta non est.</div>
+                                    </div>
+                                    <span class="ml-auto mb-auto">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-light btn-sm rounded" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="mdi mdi-dots-vertical"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <button class="dropdown-item" type="button"><i class="mdi mdi-delete"></i> Delete</button>
+                                                <button class="dropdown-item" type="button"><i class="mdi mdi-close"></i> Turn Off</button>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="text-right text-muted pt-1">3d</div>
+                                    </span>
+                                </div>
+                                <div class="p-3 d-flex align-items-center border-bottom osahan-post-header">
+                                    <div class="dropdown-list-image mr-3"><img class="rounded-circle" src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="" /></div>
+                                    <div class="font-weight-bold mr-3">
+                                        <div class="text-truncate">DAILY RUNDOWN: SATURDAY</div>
+                                        <div class="small">Pellentesque semper ex diam, at tristique ipsum varius sed. Pellentesque non metus ullamcorper</div>
+                                    </div>
+                                    <span class="ml-auto mb-auto">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-light btn-sm rounded" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="mdi mdi-dots-vertical"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <button class="dropdown-item" type="button"><i class="mdi mdi-delete"></i> Delete</button>
+                                                <button class="dropdown-item" type="button"><i class="mdi mdi-close"></i> Turn Off</button>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="text-right text-muted pt-1">3d</div>
+                                    </span>
+                                </div>
+                                <div class="p-3 d-flex align-items-center border-bottom osahan-post-header">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" />
+                                    </div>
+                                    <div class="font-weight-bold mr-3">
+                                        <div class="mb-2"><span class="font-weight-normal">Congratulate Gurdeep Singh Osahan (iamgurdeeposahan)</span> for 5 years at Askbootsrap Pvt.</div>
+                                        <button type="button" class="btn btn-outline-success btn-sm">Say congrats</button>
+                                    </div>
+                                    <span class="ml-auto mb-auto">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-light btn-sm rounded" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="mdi mdi-dots-vertical"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <button class="dropdown-item" type="button"><i class="mdi mdi-delete"></i> Delete</button>
+                                                <button class="dropdown-item" type="button"><i class="mdi mdi-close"></i> Turn Off</button>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="text-right text-muted pt-1">4d</div>
+                                    </span>
+                                </div>
+                                <div class="p-3 d-flex align-items-center osahan-post-header">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" />
+                                    </div>
+                                    <div class="font-weight-bold mr-3">
+                                        <div>
+                                            <span class="font-weight-normal">Congratulate Mnadeep singh (iamgurdeeposahan)</span> for 4 years at Askbootsrap Pvt.
+                                            <div class="small text-success"><i class="fa fa-check-circle"></i> You sent Mandeep a message</div>
+                                        </div>
+                                    </div>
+                                    <span class="ml-auto mb-auto">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-light btn-sm rounded" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="mdi mdi-dots-vertical"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <button class="dropdown-item" type="button"><i class="mdi mdi-delete"></i> Delete</button>
+                                                <button class="dropdown-item" type="button"><i class="mdi mdi-close"></i> Turn Off</button>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="text-right text-muted pt-1">4d</div>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            </div>
+
+<!-- Messages End -->
+            <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+
+              
+
+            </div>
+
+
+
+
+          </div>
+      </div>
+      
+    </div>
+  </div>
+
+    
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

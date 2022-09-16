@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Rent Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+
+    <style type="text/css">
+  
+
+            /* ============ desktop view ============ */
+            @media all and (min-width: 992px) {
+            
+                .dropdown-menu li{ 
+                    position: relative;
+                }
+                .dropdown-menu .submenu{ 
+                    display: none;
+                    position: absolute;
+                    left:100%; top:-7px;
+                }
+                .dropdown-menu .submenu-left{ 
+                    right:100%; left:auto;
+                }
+            
+                .dropdown-menu > li:hover{ background-color: #f1f1f1 }
+                .dropdown-menu > li:hover > .submenu{
+                    display: block;
+                }
+            }	
+            /* ============ desktop view .end// ============ */
+            
+            /* ============ small devices ============ */
+            @media (max-width: 991px) {
+            
+            .dropdown-menu .dropdown-menu{
+                    margin-left:0.7rem; margin-right:0.7rem; margin-bottom: .5rem;
+            }
+            
+            }	
+
+    </style>
+
+
+
+</head>
+<body style="overflow-x: hidden;">
+    <div class="sticky-top">
+        <header >
+            <div class="row">
+                <div class="col-md-3 bg-dark">
+                    
+                </div>
+                <div class="col-md-6 bg-dark">
+                    <h1 class="text-white" style="text-align: center;">House Rent Management System</h1>
+                </div>
+                <div class="col-md-3 bg-dark" id="list">
+                    <ul  style="display: flex; flex-direction: row ;list-style: none; column-gap: 10px; padding: 0; margin-TOP: 12PX">
+                        <li><a href=".\index.html" class="btn btn-light">Home</a></li>
+                        <li><a href=".\about.html" class="btn btn-light">About</a></li>
+                        <li><a href=".\contact.html" class="btn btn-light">Contact</a></li>
+                        <li><a href=".\login.html"class="btn btn-primary" type="buttom">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </div>
+        <nav>
+            <div class="row ">
+                
+                <div class="col-md-6">
+                    <ul class="navbar-nav" style="margin: 15px; margin-left: 200px;">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle btn btn-warning " href="#" data-bs-toggle="dropdown" style="text-align: center; width: 100px;">Categories</a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#"> Male &raquo; </a>
+                                   <ul class="submenu dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Hostel</a></li>
+                                    <li><a class="dropdown-item" href="#">Sublet</a></li>
+                                    <li><a class="dropdown-item" href="#">Flat</a></li>
+                                 </ul>
+                              </li>
+                              <li><a class="dropdown-item" href="#">Female &raquo; </a>
+                                   <ul class="submenu dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Hostel</a></li>
+                                    <li><a class="dropdown-item" href="#">Sublet</a></li>
+                                    <li><a class="dropdown-item" href="#">Flat</a></li>
+                                 
+                                 </ul>
+                              </li>
+                              <li><a class="dropdown-item" href="#"> Family &raquo;</a>
+                                   <ul class="submenu dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Flat</a></li>
+                                    <li><a class="dropdown-item" href="#">Sublet</a></li>
+                                 </ul>
+                              </li>
+                              
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6" style="text-align:left;">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="margin-top: 15px; margin-bottom: 5px;"><button class="btn btn-outline-success btn-md" type="submit" style="margin-top: 15px; margin-bottom: 5px;"><i class="fab fa-searchengin"></i></button>
+                       
+                      </form>
+                </div>
+            </div>  
+        </nav>
+
+    
+    <hr>
+    <div class=" d-lg-flex flex-lg-row d-flex flex-column-reverse bg-light mt-5">
+        <div class="p-5" id="2">
+            <p class="p-green" id="heading">Hostel Seat</p>
+            <P class="fs-4 fw-bold" id="title"></P>
+            <p class="text-muted mb-4">Nikonjo, Block-<span id="blockk"></span> , Road No: <span id="road-no"></span>, House No: <span id="house-no"></span> </p>
+            <p class="text-muted mb-4">Rent: Per-Seat <span id="price"></span> Taka Only</p>
+           
+            <div>
+                <a href="./approve.html" class="btn btn-success px-4">Book NOW</a>
+            </div>
+        </div>
+        <div id="1">
+            <img id="image" 
+                class="w-75 h-75" alt="">
+        </div>
+    </div>
+
+    <footer class="bg-dark">
+        <div  class="row" style="display: flex; flex-direction: row ;list-style: none; column-gap: 10px; color: white;">
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-2" >
+                <h4 >Company</h4>
+                <label for="">Name of company</label><br>
+               <label for="">+8801755555566</label><br>
+               <a href="">r2@gmail.com</a>
+
+            </div>
+            <div class="col-md-2">
+                <h4>Get help</h4>
+                <ul>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Order status</a></li>
+                    <li><a href="#">Payment options</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-md-2">
+                <h4>Follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-md-3">
+
+            </div>
+           </div>
+            
+        </footer>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>
+<script>
+ function myFunction(id) {
+  document.getElementById(id).classList.toggle("show");
+}
+   window.onload = function init(){
+       document.getElementById("image").src=`./pictuer/${localStorage.getItem("imageName")}`;
+       document.getElementById("title").innerHTML=localStorage.getItem("title");
+       document.getElementById("blockk").innerHTML=localStorage.getItem("block");
+       document.getElementById("road-no").innerHTML=localStorage.getItem("roadno");
+       document.getElementById("house-no").innerHTML=localStorage.getItem("houseno");
+       document.getElementById("price").innerHTML=localStorage.getItem("price");
+       document.getElementById("heading").innerHTML=(localStorage.getItem("type")!=="undefined"?localStorage.getItem("type"):"Hostel Seat");
+   }
+</script>

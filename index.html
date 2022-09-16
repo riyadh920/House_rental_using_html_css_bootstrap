@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Rent Management System</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+
+    <style type="text/css">
+  
+
+            /* ============ desktop view ============ */
+            @media all and (min-width: 992px) {
+            
+                .dropdown-menu li{ 
+                    position: relative;
+                }
+                .dropdown-menu .submenu{ 
+                    display: none;
+                    position: absolute;
+                    left:100%; top:-7px;
+                }
+                .dropdown-menu .submenu-left{ 
+                    right:100%; left:auto;
+                }
+            
+                .dropdown-menu > li:hover{ background-color: #f1f1f1 }
+                .dropdown-menu > li:hover > .submenu{
+                    display: block;
+                }
+            }	
+            /* ============ desktop view .end// ============ */
+            
+            /* ============ small devices ============ */
+            @media (max-width: 991px) {
+            
+            .dropdown-menu .dropdown-menu{
+                    margin-left:0.7rem; margin-right:0.7rem; margin-bottom: .5rem;
+            }
+            
+            }	
+
+    </style>
+
+
+
+</head>
+<body style="overflow-x: hidden;">
+    <div class="sticky-top">
+        <header >
+            <div class="row">
+                <div class="col-md-3 bg-dark">
+                    
+                </div>
+                <div class="col-md-6 bg-dark">
+                    <h1 class="text-white" style="text-align: center;">House Rent Management System</h1>
+                </div>
+                <div class="col-md-3 bg-dark" id="list">
+                    <ul  style="display: flex; flex-direction: row ;list-style: none; column-gap: 10px; padding: 0; margin-TOP: 12PX">
+                        <li><a href=".\index.html" class="btn btn-light">Home</a></li>
+                        <li><a href=".\about.html" class="btn btn-light">About</a></li>
+                        <li><a href=".\contact.html" class="btn btn-light">Contact</a></li>
+                        <li><a href=".\login.html"class="btn btn-primary" type="buttom">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </div>
+        <nav>
+            <div class="row ">
+                
+                <div class="col-md-6">
+                    <ul class="navbar-nav" style="margin: 15px; margin-left: 200px;">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle btn btn-warning " href="#" data-bs-toggle="dropdown" style="text-align: center; width: 100px;">Categories</a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#"> Male &raquo; </a>
+                                   <ul class="submenu dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Hostel</a></li>
+                                    <li><a class="dropdown-item" href="#">Sublet</a></li>
+                                    <li><a class="dropdown-item" href="#">Flat</a></li>
+                                 </ul>
+                              </li>
+                              <li><a class="dropdown-item" href="#">Female &raquo; </a>
+                                   <ul class="submenu dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Hostel</a></li>
+                                    <li><a class="dropdown-item" href="#">Sublet</a></li>
+                                    <li><a class="dropdown-item" href="#">Flat</a></li>
+                                 
+                                 </ul>
+                              </li>
+                              <li><a class="dropdown-item" href="#"> Family &raquo;</a>
+                                   <ul class="submenu dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Flat</a></li>
+                                    <li><a class="dropdown-item" href="#">Sublet</a></li>
+                                 </ul>
+                              </li>
+                              
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6" style="text-align:left;">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="margin-top: 15px; margin-bottom: 5px;"><button class="btn btn-outline-success btn-md" type="submit" style="margin-top: 15px; margin-bottom: 5px;"><i class="fab fa-searchengin"></i></button>
+                       
+                      </form>
+                </div>
+            </div>  
+        </nav>
+
+    
+    <hr>
+    <main>
+        <div class="row">
+            <div class="col-md-2 bg-light" >
+
+            <h5 style="text-align: center;">
+                Menu
+            </h5>
+            <div>
+                <ul style="list-style:none; text-align: center;">
+                    <li><a href="./user.html" class="btn btn-light">Dashboard</a></li>
+                    <li><a href="./userList.html" class="btn btn-light">User List</a></li>
+                    <li><a href="./ownerList.html"class="btn btn-light">Owner List</a></li>  
+                    <li><a href="./postApproval.html"class="btn btn-light">Pending List</a></li> 
+
+                </ul>
+            </div>
+            </div>
+                <div class="col-md-10">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="./pictuer/b2.jpg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./pictuer/b3.jpg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="./pictuer/b2.jpg" class="d-block w-100" alt="...">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h2 style="text-align: center;color:#3498DB">Product List</h2>
+            <div class="row">
+                <h2 style="text-align: left;color:black">Male</h2>
+                <hr>
+               <div class="col-md-3">
+                
+                   <div class="card" style="width: 18rem;margin: 10px;" >
+                       <img src=".\pictuer\a3.jpg" class="card-img-top" alt=""style="height:300px; width:auto;">
+                       <div class="card-body">
+                         <h5 class="card-title">Boys Hostel(4 seat)</h5>
+                         <p class="card-text">Nikonjo, Block-A, Road No: 10, House No: 56</p>
+                         <p class="card-text">Rent: 6000 Tk (Per seat)</p>
+                         <button onClick="goToDetailsPage('a3.jpg', 'Boys Hostel(4 seat)','A','10','56', '6000')" class="btn btn-primary">Details</a>
+                       </div>
+                   </div>
+               </div>
+                   <div class="col-md-3">
+                       <div class="card" style="width: 18rem;margin: 10px;">
+                           <img src=".\pictuer\a4.jpg" class="card-img-top" alt="..." style="height:300px ;width:auto;">
+                           <div class="card-body">
+                             <h5 class="card-title">Boys Hostel(2 seat)</h5>
+                             <p class="card-text">Nikonjo, Block-B, Road No: 11, House No: 50</p>
+                             <p class="card-text">Rent: 9000Tk(Per seat)</p>
+                             <button onClick="goToDetailsPage('a4.jpg','Boys Hostel(2 seat)','B','11','50','9000')" class="btn btn-primary">Details</a>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-md-3">
+                       <div class="card" style="width: 18rem;margin: 10px;">
+                           <img src=".\pictuer\a5.jpg" class="card-img-top" alt="..."style="height:300px; width:auto;">
+                           <div class="card-body">
+                             <h5 class="card-title">Boys Hostel(3 seat)</h5>
+                             <p class="card-text">Nikonjo, Block-C, Road No: 7, House No: 10</p>
+                             <p class="card-text">Rent: 8000Tk(Per seat)</p>
+                             <button onClick="goToDetailsPage('a5.jpg','Boys Hostel(3 seat)','C','7','10','8000')" class="btn btn-primary">Details</button>
+                           </div>
+                       </div>
+                   </div>
+                </div>
+                <div class="row">
+                    <h2 style="text-align: left;color:black">Female</h2>
+                    <hr>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 18rem;margin: 10px;">
+                            <img src=".\pictuer\a6.jpg" class="card-img-top" alt="..." style="height:300px; width:auto;">
+                            <div class="card-body">
+                              <h5 class="card-title">Girls Hostel(3 seat)</h5>
+                              <p class="card-text">Nikonjo, Block-D, Road No: 3, House No: 5</p>
+                              <p class="card-text">Rent: 7000Tk</p>
+                              <button onClick="goToDetailsPage('a6.jpg','Girls Hostel(3 seat)','D','3','5','7000')" class="btn btn-primary">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 18rem;margin: 10px;">
+                            <img src=".\pictuer\a7.jpg" class="card-img-top" alt="..." style="height:300px; width:auto;">
+                            <div class="card-body">
+                              <h5 class="card-title">Girls Hostel(2 seat)</h5>
+                              <p class="card-text">Nikonjo, Block-E, Road No: 8, House No: 85</p>
+                              <p class="card-text">Rent: 8000Tk</p>
+                              <button onClick="goToDetailsPage('a7.jpg','Girls Hostel(2 seat)','E','8','85','8000')" class="btn btn-primary">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3" >
+                        <div class="card" style="width: 18rem;margin: 10px;">
+                            <img src=".\pictuer\a8.jpg" class="card-img-top" alt="..." style="height:300px; width:auto;">
+                            <div class="card-body">
+                              <h5 class="card-title">Girls Hostel(Single Room with attach Bathroom and Belkoni)</h5>
+                              <p class="card-text">Nikonjo, Block-P, Road No: 2, House No: 55</p>
+                              <p class="card-text">Rent: 10000Tk</p>
+                              <button onClick="goToDetailsPage('a8.jpg','Girls Hostel(Single Room with attach Bathroom and Belkoni)' ,'P','2','55','10000')" class="btn btn-primary">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <h2 style="text-align: left;color:black">Family</h2>
+                    <hr>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 18rem;margin: 10px;">
+                            <img src=".\pictuer\a9.jpg" class="card-img-top" alt="..."style="height:300px; width:auto;">
+                            <div class="card-body">
+                              <h5 class="card-title">2 BedRoom</h5>
+                              <p class="card-text">Nikonjo, Block-F, Road No: 4, House No: 95</p>
+                              <p class="card-text">Rent: 20000Tk</p>
+
+                              <button onClick="goToDetailsPage('a.jpg','2 BedRoom','F','4','95','20000','Family house')" class="btn btn-primary">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 18rem;margin: 10px;">
+                            <img src=".\pictuer\a10.jpg" class="card-img-top" alt="..."style="height:300px; width:auto;">
+                            <div class="card-body">
+                              <h5 class="card-title">3 BedRoom </h5>
+                              <p class="card-text">Nikonjo, Block-A, Road No: 2, House No: 9</p>
+                              <p class="card-text">Rent: 30000Tk</p>
+                              <button onClick="goToDetailsPage('a10.jpg','3 BedRoom','A','2','9','30000','Family house')" class="btn btn-primary">Details</button>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+    </main>
+    <footer class="bg-dark">
+        <div  class="row" style="display: flex; flex-direction: row ;list-style: none; column-gap: 10px; color: white;">
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-2" >
+                <h4 >Company</h4>
+                <label for="">Name of company</label><br>
+               <label for="">+8801755555566</label><br>
+               <a href="">r2@gmail.com</a>
+
+            </div>
+            <div class="col-md-2">
+                <h4>Get help</h4>
+                <ul>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Order status</a></li>
+                    <li><a href="#">Payment options</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-md-2">
+                <h4>Follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-md-3">
+
+            </div>
+           </div>
+            
+        </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+</body>
+</html>
+<script type="text/javascript">
+  
+function goToDetailsPage(ImageName, Title,Block,RoadNo,HouseNo, Price,Type){
+    localStorage.setItem("imageName",ImageName);
+    localStorage.setItem("title",Title);
+    localStorage.setItem("block",Block);
+    localStorage.setItem("roadno",RoadNo);
+    localStorage.setItem("houseno",HouseNo);
+    localStorage.setItem("price",Price);
+    localStorage.setItem("type",Type);
+    window.location.href="HouseDetails.html";
+}
+
+
+                //	window.addEventListener("resize", function() {
+                //		"use strict"; window.location.reload(); 
+                //	});
+                
+                
+                    document.addEventListener("DOMContentLoaded", function(){
+                        
+                
+                        /////// Prevent closing from click inside dropdown
+                        document.querySelectorAll('.dropdown-menu').forEach(function(element){
+                            element.addEventListener('click', function (e) {
+                              e.stopPropagation();
+                            });
+                        })
+                
+                
+                
+                        // make it as accordion for smaller screens
+                        if (window.innerWidth < 992) {
+                
+                            // close all inner dropdowns when parent is closed
+                            document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
+                                everydropdown.addEventListener('hidden.bs.dropdown', function () {
+                                    // after dropdown is hidden, then find all submenus
+                                      this.querySelectorAll('.submenu').forEach(function(everysubmenu){
+                                          // hide every submenu as well
+                                          everysubmenu.style.display = 'none';
+                                      });
+                                })
+                            });
+                            
+                            document.querySelectorAll('.dropdown-menu a').forEach(function(element){
+                                element.addEventListener('click', function (e) {
+                        
+                                      let nextEl = this.nextElementSibling;
+                                      if(nextEl && nextEl.classList.contains('submenu')) {	
+                                          // prevent opening link if link needs to open dropdown
+                                          e.preventDefault();
+                                          console.log(nextEl);
+                                          if(nextEl.style.display == 'block'){
+                                              nextEl.style.display = 'none';
+                                          } else {
+                                              nextEl.style.display = 'block';
+                                          }
+                
+                                      }
+                                });
+                            })
+                        }
+                        // end if innerWidth
+                
+                    }); 
+                    // DOMContentLoaded  end
+            
+</script>
